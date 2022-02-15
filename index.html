@@ -4,11 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <title>Document</title>
 </head>
 <body>
     <h1>NFT Generator</h1>
-    <div id="output"></div>
+    <div class="buttons">
+        <button class="button is-primary" id="mint">MINT</button>
+    </div>
+    <div class="table-container">
+        <table class="table">
+          <thred>
+              <tr>
+                  <th><abbr title="head">head</abbr></th>
+                  <th><abbr title="mouth">mouth</abbr></th>
+                  <th><abbr title="nose">nose</abbr></th>
+                  <th><abbr title="eyes">eyes</abbr></th>
+                  <th><abbr title="ears">ears</abbr></th>
+                  <th><abbr title="hair">hair</abbr></th>
+              </tr>
+          </thred>
+          <tbody>
+              <td id="head"></td>
+              <td id="mouth"></td>
+              <td id="nose"></td>
+              <td id="eyes"></td>
+              <td id="ears"></td>
+              <td id="hair"></td>
+          </tbody>
+        </table>
+      </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="assets/js/script.js"></script>
 </html>

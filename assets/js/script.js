@@ -1,4 +1,10 @@
-var theBody = document.getElementById("output");
+var theHead = document.querySelector("#head");
+var theMouth = document.querySelector("#mouth");
+var theNose = document.querySelector("#nose");
+var theEyes = document.querySelector("#eyes");
+var theEars = document.querySelector("#ears");
+var theHair = document.querySelector("#hair");
+
 var head = [];
 var mouth = [];
 var nose = [];
@@ -33,7 +39,21 @@ function updateMetadata() {
             hair: hair[getRandomInt(totalNfts)]    
         }
     }
+    reveal();
 };
 
-updateMetadata();
-console.log(nft);
+function reveal() {
+    var i = getRandomInt(totalNfts);
+    theHead.textContent = nft[i].head;
+    theMouth.textContent = nft[i].mouth;
+    theNose.textContent = nft[i].nose;
+    theEyes.textContent = nft[i].eyes;
+    theEars.textContent = nft[i].ears;
+    theHair.textContent = nft[i].hair;
+}
+
+//updateMetadata();
+
+$("#mint").click(function() {
+    updateMetadata();
+})
