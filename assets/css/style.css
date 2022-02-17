@@ -1,3 +1,19 @@
 * {
     background-color: tomato;
 }
+.nft {
+    position: relative;
+}
+.head {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+}
+.eyes {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+}
+.mouth {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+
+}
