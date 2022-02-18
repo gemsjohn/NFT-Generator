@@ -1,15 +1,15 @@
-var theHead = document.querySelector("#head");
-var theMouth = document.querySelector("#mouth");
+var theBody = document.querySelector("#body");
 var theEyes = document.querySelector("#eyes");
+var theHair = document.querySelector("#hair");
 // var theNose = document.querySelector("#nose");
 // var theEars = document.querySelector("#ears");
 // var theHair = document.querySelector("#hair");
 
 var theNFT = document.querySelector("#nft");
 
-var head = [];
-var mouth = [];
+var body = [];
 var eyes = [];
+var hair = [];
 // var nose = [];
 // var ears = [];
 // var hair = [];
@@ -25,18 +25,18 @@ var getRandomInt = function(max) {
 
 function updateMetadata() {
     for (var i = 0; i < totalNfts; i++) {
-        head[i] = "head_" + i;
-        mouth[i] = "mouth_" + i;
+        body[i] = "body_" + i;
         eyes[i] = "eyes_" + i;
+        hair[i] = "hair_" + i;
         // nose[i] = "nose_" + i;
         // ears [i] = "ears" + i;
         // hair[i] = "hair" + i;
     }
     for (var i = 0; i < totalNfts; i++) {
         nft[i] = {
-            head: head[getRandomInt(totalNfts)], 
-            mouth: mouth[getRandomInt(totalNfts)],
-            eyes: eyes[getRandomInt(totalNfts)]
+            body: body[getRandomInt(totalNfts)], 
+            eyes: eyes[getRandomInt(totalNfts)],
+            hair: hair[getRandomInt(totalNfts)]
             // nose: nose[getRandomInt(totalNfts)], 
             // ears: ears[getRandomInt(totalNfts)], 
             // hair: hair[getRandomInt(totalNfts)]    
@@ -51,15 +51,15 @@ function reveal() {
         $('[data-img="' + remove + '"]').remove();
     }
     var i = getRandomInt(totalNfts);
-    theHead.textContent = nft[i].head;
-    theMouth.textContent = nft[i].mouth;
+    theBody.textContent = nft[i].body;
     theEyes.textContent = nft[i].eyes;
+    theHair.textContent = nft[i].hair;
     // theNose.textContent = nft[i].nose;
     // theEars.textContent = nft[i].ears;
     // theHair.textContent = nft[i].hair;
     var appendNFT = document.createElement("div");
     appendNFT.setAttribute("data-img", count)
-    appendNFT.innerHTML = "<img class='head' src='./assets/img/head/" + nft[i].head + ".png' /> <img class='eyes' src='./assets/img/eyes/" + nft[i].eyes + ".png' /> <img class='mouth' src='./assets/img/mouth/" + nft[i].mouth + ".png'/ >";
+    appendNFT.innerHTML = "<img class='body' src='./assets/ape/body/" + nft[i].body + ".png' /> <img class='body' src='./assets/ape/face.png' /> <img class='hair' src='./assets/ape/hair/" + nft[i].hair + ".png' /> <img class='eyes' src='./assets/ape/eyes/" + nft[i].eyes + ".png'/ >";
     theNFT.appendChild(appendNFT);
     count++;
 }
